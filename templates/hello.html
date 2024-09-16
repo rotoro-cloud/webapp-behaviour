@@ -1,0 +1,25 @@
+<!doctype html>
+<title>Привет с планеты Rotoro!</title>
+<body style="background: black; background: url(/static/img/{{ rocket }}.jpg) no-repeat center center fixed;
+  background-size: 70%;"></body>
+<div style="color: #232b2b;
+    text-align:  center;
+    height: 90px;
+    vertical-align:  middle;">
+{% if name %}
+  <h1>На связи узел: <b style="color:red">{{ name }}</b>!</h1>
+{% endif %}
+
+{% if version %}
+  <h1>Версия приложения: <b style="color:green">{{ version }}</b>.</h1>
+{% endif %}
+
+  {% if contents %}
+  <textarea rows="10" cols="50">
+    {{ contents }}
+  </textarea>
+  {% endif %}
+
+  <h1>Связь завершена.</h1>
+
+</div>
